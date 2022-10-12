@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 body{
     width: 100vw;
     font:normal normal 400 1rem/1rem "Nunito", sans-serif ;
-    background: #F5F6F8;
+    background: ${(props) => props.theme.colors.background};
     overflow-x: hidden;
 }   
 

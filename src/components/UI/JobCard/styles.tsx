@@ -3,7 +3,7 @@ import { JobCardInterface } from "../../../utils/JobCardInterface";
 
 export const Container = styled.div`
   cursor: pointer;
-  background: #ffffff;
+  background: ${(props) => props.theme.colors.card};
   height: 180px;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -24,10 +24,12 @@ export const Container = styled.div`
   .main-infos {
     margin-top: 20px;
     p {
-      color: #a09999;
+      color: ${(props) => props.theme.colors.subtitle};
       font-size: 0.9rem;
     }
     h3 {
+      color: ${(props) => props.theme.colors.title};
+
       margin: 5px 0;
     }
   }
