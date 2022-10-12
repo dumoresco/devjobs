@@ -4,7 +4,7 @@ export const Container = styled.div`
   padding: 0 20px;
   width: 100%;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.colors.card};
   margin-top: -25px;
 
   .fields-group {
@@ -21,8 +21,8 @@ export const Container = styled.div`
       align-items: center;
 
       &:nth-child(2) {
-        border-left: 1px solid #d9d9d9;
-        border-right: 1px solid #d9d9d9;
+        border-left: 1px solid ${(props) => props.theme.colors.background};
+        border-right: 1px solid ${(props) => props.theme.colors.background};
       }
 
       input {

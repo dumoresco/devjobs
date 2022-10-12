@@ -14,6 +14,7 @@ export const Container = styled.div`
     max-width: 1000px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     h1 {
       font-size: 1.8rem;
