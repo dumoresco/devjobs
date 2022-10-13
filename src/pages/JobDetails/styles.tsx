@@ -218,7 +218,7 @@ export const Footer = styled.footer`
     padding: 10px;
     .infos {
       width: 100%;
-      height: auto
+      height: auto;
       flex-direction: column;
     }
     .infos-title {

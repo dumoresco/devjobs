@@ -19,9 +19,14 @@ const JobDetails: React.FC<JobDetailsInterface> = (props) => {
 
   console.log(params.id);
 
-  const response = data[params.id - 1];
+  const useParamsInt = (key = "id") => {
+    const params = useParams();
+    return params[key] ? parseInt(params[key]) : null;
+  };
 
-  console.log(response);
+  const id = useParamsInt() || 0;
+
+  const response = data[id - 1];
 
   return (
     <>
