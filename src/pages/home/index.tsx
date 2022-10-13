@@ -28,7 +28,6 @@ const Home: React.FC = () => {
     filteredJobs = data;
   }
 
-  console.log(data);
   return (
     <Container>
       <div className="container">

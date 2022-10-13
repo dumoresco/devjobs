@@ -22,11 +22,9 @@ const FilterCard: React.FC<FilterCardProps> = ({
   const [jobLocation, setJobLocation] = useState("");
 
   const handleFilterByName = (e: any) => {
-    setJobName(e.target.value);
     setInput(jobName);
     setLocation(jobLocation);
     setChecked(isChecked);
-    console.log(isChecked);
   };
 
   return (
