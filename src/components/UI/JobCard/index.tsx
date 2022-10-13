@@ -23,7 +23,7 @@ const JobCard: React.FC<JobCardInterface> = ({
   return (
     <Container onClick={() => showJobDetails(id)}>
       <Logo className="img" logoBackground={logoBackground}>
-        <img src={`${logo}`} alt="" />
+        <img src={"src/" + logo} alt="" />
       </Logo>
       <div className="main-infos">
         <p>
