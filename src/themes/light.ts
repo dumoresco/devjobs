@@ -8,5 +8,6 @@ export default {
     subtitle: "#A09999",
     buttonBg: "#F2F2FD",
     buttonColor: "#5D66DC",
+    shadow: "#5d66dc2d",
   },
 };

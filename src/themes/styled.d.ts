@@ -12,6 +12,7 @@ declare module "styled-components" {
       subtitle: string;
       buttonBg: string;
       buttonColor: string;
+      shadow: string;
     };
   }
 }

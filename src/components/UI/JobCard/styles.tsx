@@ -12,6 +12,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-around;
   padding: 10px;
+  box-shadow: 0 5px 5px ${(props) => props.theme.colors.shadow};
 
   &:hover {
     border: 1px solid #5d66dc65;
