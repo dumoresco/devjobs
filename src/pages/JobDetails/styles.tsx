@@ -215,13 +215,14 @@ export const Footer = styled.footer`
   }
 
   @media (max-width: 550px) {
+    padding: 10px;
     .infos {
       width: 100%;
+      height: auto
       flex-direction: column;
     }
     .infos-title {
-      margin-bottom: 20px;
-      text-align: center;
+      display: none;
     }
   }
 `;
