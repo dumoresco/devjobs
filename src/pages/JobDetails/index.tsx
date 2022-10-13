@@ -10,21 +10,14 @@ import {
   Footer,
 } from "./styles";
 import { JobDetailsInterface } from "utils/JobCardInterface";
-import { useParams } from "react-router-dom";
+import { Routes, useParams, useRoutes } from "react-router-dom";
 
 import data from "../../assets/data.json";
 
 const JobDetails: React.FC<JobDetailsInterface> = (props) => {
   const params = useParams();
 
-  console.log(params.id);
-
-  const useParamsInt = (key = "id") => {
-    const params = useParams();
-    return params[key] ? parseInt(params[key]) : null;
-  };
-
-  const id = useParamsInt() || 0;
+  const id = params.id ? parseInt(params.id) : 0;
 
   const response = data[id - 1];
 
@@ -65,7 +58,7 @@ const JobDetails: React.FC<JobDetailsInterface> = (props) => {
               {response.requirements.content}
               <ul>
                 {response.requirements.items.map((item) => (
-                  <li>{item}</li>
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             </div>
@@ -76,7 +69,7 @@ const JobDetails: React.FC<JobDetailsInterface> = (props) => {
               {response.role.content}
               <ul>
                 {response.role.items.map((item) => (
-                  <li>{item}</li>
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             </div>
