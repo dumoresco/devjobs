@@ -10,10 +10,8 @@ export const GlobalStyles = createGlobalStyle`
 
 
 body{
-    width: 100vw;
     font:normal normal 400 1rem/1rem "Nunito", sans-serif ;
     background: ${(props) => props.theme.colors.background};
-    overflow-x: hidden;
 }   
 
 input,button{    
@@ -23,6 +21,7 @@ input,button{
 }
 
 input{
+    flex: 1;
     outline: none;
 }
 button{

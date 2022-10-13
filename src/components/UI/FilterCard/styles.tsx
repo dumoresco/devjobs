@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Desktop = styled.div`
   padding: 0 20px;
   width: 100%;
   border-radius: 4px;
   background-color: ${(props) => props.theme.colors.card};
   margin-top: -25px;
+  display: flex;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 
   .fields-group {
     width: 100%;
@@ -13,29 +18,6 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    .field-item {
-      width: 100%;
-      padding: 0 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:nth-child(2) {
-        border-left: 1px solid ${(props) => props.theme.colors.background};
-        border-right: 1px solid ${(props) => props.theme.colors.background};
-      }
-
-      input {
-        padding: 15px 10px;
-        color: #5e6068;
-      }
-
-      label {
-        color: #91939c;
-        font-weight: 700;
-        margin-left: 20px;
-      }
-    }
     button {
       background-color: #5d66dc;
       color: #ffffff;
@@ -75,5 +57,51 @@ export const Container = styled.div`
         }
       }
     }
+  }
+`;
+
+export const Mobile = styled.div`
+  margin-top: -25px;
+  background-color: ${(props) => props.theme.colors.card};
+  width: 100%;
+  padding: 0 10px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+
+  button {
+    background: ${(props) => props.theme.colors.primary};
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const FieldItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  &:nth-child(2) {
+    border-left: 1px solid ${(props) => props.theme.colors.background};
+    border-right: 1px solid ${(props) => props.theme.colors.background};
+  }
+
+  input {
+    padding: 15px 10px;
+    color: #5e6068;
+  }
+
+  label {
+    color: #91939c;
+    font-weight: 700;
+    margin-left: 20px;
   }
 `;

@@ -6,5 +6,7 @@ export default {
     card: "#18202C",
     title: "#FFFFFF",
     subtitle: "#A09999",
+    buttonBg: "#2D323E",
+    buttonColor: "#BFBFBF",
   },
 };

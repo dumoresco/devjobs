@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   .main-card {
     border-radius: 4px;
-    background: #fff;
+    background: ${(props) => props.theme.colors.card};
     width: 100%;
     display: flex;
     align-items: center;
@@ -31,20 +31,21 @@ export const Container = styled.div`
     padding: 0 50px;
 
     button {
-      background-color: #f2f2fd;
-      color: #5d66dc;
+      background-color: ${(props) => props.theme.colors.buttonBg};
+      color: ${(props) => props.theme.colors.buttonColor};
       border-radius: 4px;
       font-weight: bold;
       padding: 10px 30px;
     }
     .infos-title {
       h3 {
+        color: ${(props) => props.theme.colors.title};
         font-weight: 700;
         font-size: 2rem;
         margin-bottom: 15px;
       }
       span {
-        color: #a09999;
+        color: ${(props) => props.theme.colors.subtitle};
         font-weight: 700;
       }
     }
