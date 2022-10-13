@@ -7,6 +7,8 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   margin-top: -20px;
+  justify-content: center;
+  flex-direction: column;
 
   .main-card {
     border-radius: 4px;
@@ -14,6 +16,13 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 20px;
+    }
   }
   .logo-container {
     width: 200px;
@@ -72,6 +81,147 @@ export const Container = styled.div`
       button {
         margin-top: 20px;
       }
+    }
+  }
+`;
+
+export const BtnApply = styled.button`
+  border-radius: 4px;
+  background-color: ${(props) => props.theme.colors.primary};
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 15px 40px;
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+`;
+
+export const DescriptionContainer = styled.div`
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  display: flex;
+  width: 100%;
+  color: #a1a5b0;
+  margin: 20px 0;
+  justify-content: center;
+  flex-direction: column;
+  background: ${(props) => props.theme.colors.card};
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a1a5b0;
+  line-height: 25px;
+  text-align: justify;
+
+  .description-text {
+    margin: 20px 0;
+  }
+
+  @media (max-width: 550px) {
+    padding: 20px;
+  }
+`;
+
+export const DescriptionHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .description-title {
+    width: 50%;
+    h1 {
+      text-align: left;
+      color: ${(props) => props.theme.colors.title};
+      font-size: 2rem;
+      margin: 20px 0;
+      line-height: 30px;
+      font-weight: bold;
+    }
+
+    p {
+      color: ${(props) => props.theme.colors.subtitle};
+    }
+    span {
+      color: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+
+    .description-title {
+      width: 100%;
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+`;
+
+export const RequirementsContainer = styled.div`
+  h2 {
+    font-size: 1.4rem;
+    color: ${(props) => props.theme.colors.title};
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  .requirements-description {
+    margin: 20px 0;
+  }
+
+  ul {
+    margin: 20px 20px;
+    li + li {
+      margin-top: 10px;
+    }
+  }
+`;
+
+export const Footer = styled.footer`
+  width: 100%;
+  border-radius: 4px;
+  background: ${(props) => props.theme.colors.card};
+  padding: 30px 0;
+  .footer-card {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    .infos {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+
+      .infos-title {
+        h3 {
+          color: ${(props) => props.theme.colors.title};
+          font-weight: 700;
+          font-size: 2rem;
+          margin-bottom: 15px;
+        }
+        span {
+          color: ${(props) => props.theme.colors.subtitle};
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    .infos {
+      width: 100%;
+      flex-direction: column;
+    }
+    .infos-title {
+      margin-bottom: 20px;
+      text-align: center;
     }
   }
 `;
