@@ -11,7 +11,9 @@ export const GlobalStyles = createGlobalStyle`
 
 body{
     font:normal normal 400 1rem/1rem "Nunito", sans-serif ;
-    background: ${(props) => props.theme.colors.background};
+    background: ${(props) =>
+      props.theme.colors.background};  transition: background 0.5s;
+
 }   
 
 input,button{    

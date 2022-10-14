@@ -4,6 +4,7 @@ import { JobCardInterface } from "../../../utils/JobCardInterface";
 export const Container = styled.div`
   cursor: pointer;
   background: ${(props) => props.theme.colors.card};
+  transition: background 0.5s, box-shadow 0.5s;
   height: 180px;
   border: 1px solid transparent;
   border-radius: 4px;

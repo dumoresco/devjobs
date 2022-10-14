@@ -5,6 +5,8 @@ export const Desktop = styled.div`
   width: 100%;
   border-radius: 4px;
   background-color: ${(props) => props.theme.colors.card};
+  transition: background-color 0.5s;
+
   margin-top: -25px;
   display: flex;
 
@@ -63,6 +65,8 @@ export const Desktop = styled.div`
 export const Mobile = styled.div`
   margin-top: -25px;
   background-color: ${(props) => props.theme.colors.card};
+  transition: background-color 0.5s;
+
   width: 100%;
   padding: 0 10px;
   display: none;
@@ -75,6 +79,8 @@ export const Mobile = styled.div`
 
   button {
     background: ${(props) => props.theme.colors.primary};
+    transition: background 0.5s;
+
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -92,6 +98,7 @@ export const FieldItem = styled.div`
   &:nth-child(2) {
     border-left: 1px solid ${(props) => props.theme.colors.background};
     border-right: 1px solid ${(props) => props.theme.colors.background};
+    transition: border-color 0.5s;
   }
 
   input {

@@ -13,6 +13,8 @@ export const Container = styled.div`
   .main-card {
     border-radius: 4px;
     background: ${(props) => props.theme.colors.card};
+    transition: background 0.5s;
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -42,6 +44,9 @@ export const Container = styled.div`
     button {
       background-color: ${(props) => props.theme.colors.buttonBg};
       color: ${(props) => props.theme.colors.buttonColor};
+      transition: background-color 0.5s;
+      transition: color 0.5s;
+
       border-radius: 4px;
       font-weight: bold;
       padding: 10px 30px;
@@ -49,12 +54,16 @@ export const Container = styled.div`
     .infos-title {
       h3 {
         color: ${(props) => props.theme.colors.title};
+        transition: color 0.5s;
+
         font-weight: 700;
         font-size: 2rem;
         margin-bottom: 15px;
       }
       span {
         color: ${(props) => props.theme.colors.subtitle};
+        transition: span 0.5s;
+
         font-weight: 700;
       }
     }
@@ -88,6 +97,8 @@ export const Container = styled.div`
 export const BtnApply = styled.button`
   border-radius: 4px;
   background-color: ${(props) => props.theme.colors.primary};
+  transition: background-color 0.5s;
+
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;
@@ -108,6 +119,8 @@ export const DescriptionContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   background: ${(props) => props.theme.colors.card};
+  transition: background 0.5s;
+
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 400;
@@ -134,6 +147,8 @@ export const DescriptionHeader = styled.div`
     h1 {
       text-align: left;
       color: ${(props) => props.theme.colors.title};
+      transition: color 0.5s;
+
       font-size: 2rem;
       margin: 20px 0;
       line-height: 30px;
@@ -142,9 +157,11 @@ export const DescriptionHeader = styled.div`
 
     p {
       color: ${(props) => props.theme.colors.subtitle};
+      transition: color 0.5s;
     }
     span {
       color: ${(props) => props.theme.colors.primary};
+      transition: color 0.5s;
     }
   }
 
@@ -164,6 +181,8 @@ export const RequirementsContainer = styled.div`
   h2 {
     font-size: 1.4rem;
     color: ${(props) => props.theme.colors.title};
+    transition: color 0.5s;
+
     margin: 20px 0;
     font-weight: bold;
   }
@@ -184,6 +203,8 @@ export const Footer = styled.footer`
   width: 100%;
   border-radius: 4px;
   background: ${(props) => props.theme.colors.card};
+  transition: background 0.5s;
+
   padding: 30px 0;
   .footer-card {
     max-width: 900px;
@@ -202,12 +223,16 @@ export const Footer = styled.footer`
       .infos-title {
         h3 {
           color: ${(props) => props.theme.colors.title};
+          transition: color 0.5s;
+
           font-weight: 700;
           font-size: 2rem;
           margin-bottom: 15px;
         }
         span {
           color: ${(props) => props.theme.colors.subtitle};
+          transition: color 0.5s;
+
           font-weight: 700;
         }
       }
