@@ -69,10 +69,14 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     .main-card {
       flex-direction: column;
       position: relative;
+
+      img {
+        padding: 5px;
+      }
 
       .logo-container {
         width: 50px;
@@ -103,7 +107,7 @@ export const BtnApply = styled.button`
   font-size: 0.8rem;
   font-weight: 700;
   padding: 15px 40px;
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -132,18 +136,18 @@ export const DescriptionContainer = styled.div`
     margin: 20px 0;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     padding: 20px;
   }
 `;
 
 export const DescriptionHeader = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .description-title {
-    width: 50%;
     h1 {
       text-align: left;
       color: ${(props) => props.theme.colors.title};
@@ -165,13 +169,15 @@ export const DescriptionHeader = styled.div`
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     flex-direction: column;
 
     .description-title {
       width: 100%;
+      margin-bottom: 20px;
       h1 {
         font-size: 1.5rem;
+        margin: 5px 0;
       }
     }
   }
@@ -239,12 +245,11 @@ export const Footer = styled.footer`
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     padding: 10px;
     .infos {
       width: 100%;
-      height: auto;
-      flex-direction: column;
+      height: 0px;
     }
     .infos-title {
       display: none;

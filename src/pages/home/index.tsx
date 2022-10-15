@@ -19,7 +19,11 @@ const Home: React.FC = () => {
       job.position.toLowerCase().includes(input.toLowerCase())
     );
   } else if (isChecked) {
-    filteredJobs = data.filter((job) => job.contract === "Full Time");
+    filteredJobs = data.filter(
+      (job) =>
+        job.contract === "Full Time" &&
+        job.position.toLowerCase().includes(input.toLowerCase())
+    );
   } else if (location.length > 0) {
     filteredJobs = data.filter((job) =>
       job.location.toLowerCase().includes(location.toLowerCase())
