@@ -12,6 +12,10 @@ const Home: React.FC = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [location, setLocation] = useState("");
 
+  const cardPerRow = 6;
+
+  const [next, setNext] = useState(cardPerRow);
+
   let filteredJobs: any[] = [];
 
   if (input.length > 0) {
@@ -32,6 +36,10 @@ const Home: React.FC = () => {
     filteredJobs = data;
   }
 
+  const handleLoadMore = () => {
+    setNext(next + cardPerRow);
+  };
+
   return (
     <Container>
       <div className="container">
@@ -42,7 +50,7 @@ const Home: React.FC = () => {
         />
         <div className="jobs-container">
           {filteredJobs.length > 0
-            ? filteredJobs.map((job) => (
+            ? filteredJobs?.slice(0, next).map((job) => (
                 <Link
                   key={job.id}
                   to={`/${job.id}`}
@@ -61,6 +69,14 @@ const Home: React.FC = () => {
                 </Link>
               ))
             : "No job's found"}
+        </div>
+        <div className="btn-container">
+          {" "}
+          {next < filteredJobs?.length && (
+            <button onClick={handleLoadMore} className="btn-load_more">
+              Load more
+            </button>
+          )}
         </div>
       </div>
     </Container>
